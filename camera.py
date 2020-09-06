@@ -3,10 +3,8 @@ from time import sleep
 
 camera = PiCamera()
 
-camera.image_effect = 'gpen'
 camera.start_preview()
-
-camera.start_recording('/home/pi/Desktop/p_video.h264')
-sleep(10)
-camera.stop_recording()
+camera.exposure_mode = 'beach'
+sleep(5)
+camera.capture('/home/pi/Desktop/image_b.jpg')
 camera.stop_preview()
